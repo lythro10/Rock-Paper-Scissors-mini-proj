@@ -1,7 +1,7 @@
 const getUserChoice = userInput => {
     userInput = userInput.toLowerCase();
     
-    if(userInput === 'rock' || userInput === 'paper' || userInput === 'scissors'){
+    if(userInput === 'rock' || userInput === 'paper' || userInput === 'scissors' ){
       return userInput
     }else {
       console.log('error the input is wrong')
@@ -47,4 +47,15 @@ const getUserChoice = userInput => {
   }
   
   
-  console.log(determineWinner('paper','rock' ))
+  //console.log(determineWinner('paper','rock' ))
+  
+  function playGame(){
+    let userChoice = getUserChoice('rock');
+    let computerChoice = getComputerChoice()
+    console.log('You threw: ' + userChoice);
+    console.log('The Computer threw ' + computerChoice);
+    console.log(determineWinner(userChoice, computerChoice));
+    
+  };
+  
+  playGame();
